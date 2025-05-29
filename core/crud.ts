@@ -18,7 +18,7 @@ function create(content: string) {
     done: false,
   }
 
-  const todos = [todo]
+  const todos: Array<Todo> = [...read(), todo]
 
   // save content on system
   fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos, dogs: [] }, null, 2))
