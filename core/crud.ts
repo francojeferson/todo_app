@@ -27,8 +27,12 @@ function create(content: string) {
 
 function read(): Array<Todo> {
   const dbString = fs.readFileSync(DB_FILE_PATH, 'utf-8')
-  const db = JSON.parse(dbString)
-  return db
+  const db = JSON.parse(dbString || '{}')
+  // Fail Fast Validation
+  if (!db.todos) {
+    return []
+  }
+  return db.todos
 }
 
 // [SIMULATION]
