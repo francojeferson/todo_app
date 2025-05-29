@@ -10,10 +10,10 @@ function create(content: string) {
     content: content,
   }
 
-  console.log(todo)
+  const todos = [todo]
 
   // save content on system
-  fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todo))
+  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos, dogs: [] }, null, 2))
   return content
 }
 
