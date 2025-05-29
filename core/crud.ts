@@ -4,10 +4,23 @@ const DB_FILE_PATH = './core/db'
 console.log('[CRUD]')
 
 function create(content: string) {
+  // create a JS object notation (json.org)
+  const todo = {
+    content: content,
+  }
+
+  console.log(todo)
+
   // save content on system
   fs.writeFileSync(DB_FILE_PATH, content)
   return content
 }
 
+function read() {
+  const db = fs.readFileSync(DB_FILE_PATH, 'utf-8')
+  return db
+}
+
 // [SIMULATION]
-console.log(create('testing ts-node'))
+create('first TODO')
+console.log(read())
