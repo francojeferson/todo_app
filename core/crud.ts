@@ -4,10 +4,18 @@ const DB_FILE_PATH = './core/db'
 console.log('[CRUD]')
 
 function create(content: string) {
+  // create a model
+  interface Todo {
+    date: string
+    content: string
+    done: boolean
+  }
+
   // create a JS object notation (json.org)
-  const todo = {
+  const todo: Todo = {
     date: new Date().toISOString(),
     content: content,
+    done: false,
   }
 
   const todos = [todo]

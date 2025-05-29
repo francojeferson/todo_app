@@ -1,8 +1,9 @@
 {
   "todos": [
     {
-      "date": "2025-05-29T20:39:06.218Z",
-      "content": "second TODO"
+      "date": "2025-05-29T20:42:10.560Z",
+      "content": "second TODO",
+      "done": false
     }
   ],
   "dogs": []
