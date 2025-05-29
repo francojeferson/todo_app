@@ -3,14 +3,14 @@ import fs from 'fs' //ES6
 const DB_FILE_PATH = './core/db'
 console.log('[CRUD]')
 
-function create(content: string) {
-  // create a model
-  interface Todo {
-    date: string
-    content: string
-    done: boolean
-  }
+// create a model
+interface Todo {
+  date: string
+  content: string
+  done: boolean
+}
 
+function create(content: string) {
   // create a JS object notation (json.org)
   const todo: Todo = {
     date: new Date().toISOString(),
@@ -25,8 +25,9 @@ function create(content: string) {
   return content
 }
 
-function read() {
-  const db = fs.readFileSync(DB_FILE_PATH, 'utf-8')
+function read(): Array<Todo> {
+  const dbString = fs.readFileSync(DB_FILE_PATH, 'utf-8')
+  const db = JSON.parse(dbString)
   return db
 }
 
