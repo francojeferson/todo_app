@@ -4,8 +4,8 @@
   "description": "CRUD project",
   "main": "index.js",
   "scripts": {
-    "start": "node ./core/crud.js",
-    "dev": "nodemon ./core/crud.js",
+    "start:crud": "npx ts-node ./core/crud.ts",
+    "dev:crud": "nodemon --ext ts,tsx --exec npm run start:crud",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/francojeferson/todo_app#readme",
   "devDependencies": {
+    "@types/node": "^22.15.24",
     "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
   }
 }
