@@ -21,7 +21,7 @@ function create(content: string) {
   const todos: Array<Todo> = [...read(), todo]
 
   // save content on system
-  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos, dogs: [] }, null, 2))
+  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos }, null, 2))
   return content
 }
 
@@ -35,7 +35,12 @@ function read(): Array<Todo> {
   return db.todos
 }
 
+function CLEAR_DB(){
+  fs.writeFileSync(DB_FILE_PATH, "")
+}
+
 // [SIMULATION]
+CLEAR_DB()
 create('first TODO')
 create('second TODO')
 console.log(read())

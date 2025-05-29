@@ -1,20 +1,14 @@
 {
   "todos": [
     {
-      "date": "2025-05-29T21:09:39.368Z",
-      "content": "second TODO",
-      "done": false
-    },
-    {
-      "date": "2025-05-29T21:13:28.171Z",
+      "date": "2025-05-29T21:28:18.987Z",
       "content": "first TODO",
       "done": false
     },
     {
-      "date": "2025-05-29T21:13:28.172Z",
+      "date": "2025-05-29T21:28:18.988Z",
       "content": "second TODO",
       "done": false
     }
-  ],
-  "dogs": []
+  ]
 }
