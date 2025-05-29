@@ -6,13 +6,14 @@ console.log('[CRUD]')
 function create(content: string) {
   // create a JS object notation (json.org)
   const todo = {
+    date: new Date().toISOString(),
     content: content,
   }
 
   console.log(todo)
 
   // save content on system
-  fs.writeFileSync(DB_FILE_PATH, content)
+  fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todo))
   return content
 }
 
