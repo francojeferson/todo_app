@@ -24,4 +24,5 @@ function read() {
 
 // [SIMULATION]
 create('first TODO')
+create('second TODO')
 console.log(read())
