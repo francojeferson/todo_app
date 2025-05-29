@@ -1,0 +1,26 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "CRUD project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./core/crud.js",
+    "dev": "nodemon ./core/crud.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francojeferson/todo_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/francojeferson/todo_app/issues"
+  },
+  "homepage": "https://github.com/francojeferson/todo_app#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

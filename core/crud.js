@@ -9,4 +9,4 @@ function create(content) {
 }
 
 // [SIMULATION]
-console.log(create('Hello World'))
+console.log(create('testing nodemon'))
