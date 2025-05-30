@@ -75,4 +75,6 @@ const thirdTodo = create('second TODO')
 //   done: true,
 // })
 updateContentById(thirdTodo.id, 'Updated!')
-console.log(read())
+const todos = read()
+console.log(todos)
+console.log(todos.length)
