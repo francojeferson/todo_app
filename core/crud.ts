@@ -12,7 +12,7 @@ interface Todo {
   done: boolean
 }
 
-function create(content: string) {
+function create(content: string): Todo {
   // create a JS object notation (json.org)
   const todo: Todo = {
     id: uuid(),
@@ -25,7 +25,7 @@ function create(content: string) {
 
   // save content on system
   fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos }, null, 2))
-  return content
+  return todo
 }
 
 function read(): Array<Todo> {
@@ -38,6 +38,10 @@ function read(): Array<Todo> {
   return db.todos
 }
 
+function update(id: string, todo: Partial<Todo>) {
+  console.log(todo)
+}
+
 function CLEAR_DB() {
   fs.writeFileSync(DB_FILE_PATH, '')
 }
@@ -45,5 +49,9 @@ function CLEAR_DB() {
 // [SIMULATION]
 CLEAR_DB()
 create('first TODO')
-create('second TODO')
+create('first TODO')
+const thirdTodo = create('second TODO')
+update(thirdTodo.id, {
+  content: 'second TODO with new content',
+})
 console.log(read())
