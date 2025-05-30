@@ -1,4 +1,5 @@
 import fs from 'fs' //ES6
+import { v4 as uuid } from 'uuid'
 // const fs = require('fs') //CommonJS
 const DB_FILE_PATH = './core/db'
 console.log('[CRUD]')
@@ -14,7 +15,7 @@ interface Todo {
 function create(content: string) {
   // create a JS object notation (json.org)
   const todo: Todo = {
-    id: Date.now().toString(),
+    id: uuid(),
     date: new Date().toISOString(),
     content: content,
     done: false,

@@ -22,9 +22,11 @@
   "homepage": "https://github.com/francojeferson/todo_app#readme",
   "devDependencies": {
     "@types/node": "^22.15.24",
+    "@types/uuid": "^10.0.0",
     "nodemon": "^3.1.10"
   },
   "dependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0"
   }
 }
