@@ -46,7 +46,8 @@ function update(id: string, partialTodo: Partial<Todo>) {
       Object.assign(currentTodo, partialTodo)
     }
   })
-  console.log('UPDATED TODOS', todos)
+
+  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos }, null, 2))
 }
 
 function CLEAR_DB() {
