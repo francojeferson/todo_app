@@ -67,6 +67,7 @@ create('first TODO')
 create('first TODO')
 const thirdTodo = create('second TODO')
 update(thirdTodo.id, {
-  content: 'second TODO with new content',
+  content: 'Updated!',
+  done: true,
 })
 console.log(read())

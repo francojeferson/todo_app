@@ -1,22 +1,22 @@
 {
   "todos": [
     {
-      "id": "9e949e2a-c437-48e4-abb0-790ae1e35ae7",
-      "date": "2025-05-30T19:24:24.935Z",
+      "id": "0b17dbe8-b946-4a36-bbd1-a7ae5ee78262",
+      "date": "2025-05-30T19:26:42.596Z",
       "content": "first TODO",
       "done": false
     },
     {
-      "id": "21261724-f610-463a-a890-f037c591d774",
-      "date": "2025-05-30T19:24:24.936Z",
+      "id": "8827592c-b1c9-4847-8aee-733cee210b00",
+      "date": "2025-05-30T19:26:42.597Z",
       "content": "first TODO",
       "done": false
     },
     {
-      "id": "aa2ed645-722b-409e-ae46-73a6eab51b23",
-      "date": "2025-05-30T19:24:24.957Z",
-      "content": "second TODO with new content",
-      "done": false
+      "id": "eca25bd1-86e9-41d4-8da2-844cfc884a98",
+      "date": "2025-05-30T19:26:42.607Z",
+      "content": "Updated!",
+      "done": true
     }
   ]
 }
