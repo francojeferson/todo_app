@@ -1,20 +1,14 @@
 {
   "todos": [
     {
-      "id": "bafe020c-e524-47ed-8ad6-3c303da646ad",
-      "date": "2025-05-30T19:47:53.587Z",
+      "id": "d06e98ca-dda0-4e5d-9e9b-2aa1da93f1a8",
+      "date": "2025-05-30T19:52:42.042Z",
       "content": "first TODO",
       "done": false
     },
     {
-      "id": "16ac27a4-c1a1-4065-8434-d14a65c74ad0",
-      "date": "2025-05-30T19:47:53.615Z",
-      "content": "extra TODO",
-      "done": false
-    },
-    {
-      "id": "fe70995c-86bb-49e2-98fd-ba9c4a66dc30",
-      "date": "2025-05-30T19:47:53.616Z",
+      "id": "ddce5c80-922a-4a30-8701-4692aae10608",
+      "date": "2025-05-30T19:52:42.080Z",
       "content": "Updated!",
       "done": false
     }
