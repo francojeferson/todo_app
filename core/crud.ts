@@ -5,6 +5,7 @@ console.log('[CRUD]')
 
 // create a model
 interface Todo {
+  id: string
   date: string
   content: string
   done: boolean
@@ -13,6 +14,7 @@ interface Todo {
 function create(content: string) {
   // create a JS object notation (json.org)
   const todo: Todo = {
+    id: '1',
     date: new Date().toISOString(),
     content: content,
     done: false,
@@ -35,8 +37,8 @@ function read(): Array<Todo> {
   return db.todos
 }
 
-function CLEAR_DB(){
-  fs.writeFileSync(DB_FILE_PATH, "")
+function CLEAR_DB() {
+  fs.writeFileSync(DB_FILE_PATH, '')
 }
 
 // [SIMULATION]
