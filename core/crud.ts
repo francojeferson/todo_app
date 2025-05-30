@@ -57,6 +57,10 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
   return updatedTodo
 }
 
+function updateContentById(id: string, content: string): Todo {
+  return update(id, { content })
+}
+
 function CLEAR_DB() {
   fs.writeFileSync(DB_FILE_PATH, '')
 }
@@ -66,8 +70,9 @@ CLEAR_DB()
 create('first TODO')
 create('first TODO')
 const thirdTodo = create('second TODO')
-update(thirdTodo.id, {
-  content: 'Updated!',
-  done: true,
-})
+// update(thirdTodo.id, {
+//   content: 'Updated!',
+//   done: true,
+// })
+updateContentById(thirdTodo.id, 'Updated!')
 console.log(read())
