@@ -71,7 +71,7 @@ function deleteById(id: string) {
     return true
   })
 
-  console.log('todosWithoutOne', todosWithoutOne)
+  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos: todosWithoutOne }, null, 2))
 }
 
 function CLEAR_DB() {
@@ -83,6 +83,8 @@ CLEAR_DB()
 create('first TODO')
 const secondTodo = create('second TODO')
 deleteById(secondTodo.id)
+const extraTodo = create('extra TODO')
+// deleteById(extraTodo.id)
 const thirdTodo = create('third TODO')
 // update(thirdTodo.id, {
 //   content: 'Updated!',
