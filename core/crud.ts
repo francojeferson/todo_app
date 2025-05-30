@@ -14,7 +14,7 @@ interface Todo {
 function create(content: string) {
   // create a JS object notation (json.org)
   const todo: Todo = {
-    id: '1',
+    id: Date.now().toString(),
     date: new Date().toISOString(),
     content: content,
     done: false,
