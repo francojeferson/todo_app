@@ -2,12 +2,13 @@
 
 import { GlobalStyles } from '../src/themes/GlobalStyles'
 
-const bg = 'https://mariosouto.com/cursos/crudcomqualidade/bg'
+// const bg = 'https://mariosouto.com/cursos/crudcomqualidade/bg'
+const bg = '/bg.jpg' // inside public folder
 
 export default function Page() {
   return (
     <main>
-      <GlobalStyles themeName="devsoutinho" />
+      <GlobalStyles themeName="coolGrey" />
       <header
         style={{
           backgroundImage: `url('${bg}')`,
