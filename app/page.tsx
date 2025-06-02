@@ -1,8 +1,11 @@
 'use client'
 
+import { GlobalStyles } from '../src/themes/GlobalStyles'
+
 export default function Page() {
   return (
     <main>
+      <GlobalStyles />
       <header
         style={
           {
