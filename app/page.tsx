@@ -2,16 +2,16 @@
 
 import { GlobalStyles } from '../src/themes/GlobalStyles'
 
+const bg = 'https://mariosouto.com/cursos/crudcomqualidade/bg'
+
 export default function Page() {
   return (
     <main>
-      <GlobalStyles />
+      <GlobalStyles themeName="devsoutinho" />
       <header
-        style={
-          {
-            //  backgroundImage: `url('${bg}')`,
-          }
-        }
+        style={{
+          backgroundImage: `url('${bg}')`,
+        }}
       >
         <div className="typewriter">
           <h1>O que fazer hoje?</h1>
