@@ -1,0 +1,7 @@
+{
+  "editorconfig": true,
+  "trailingComma": "all",
+  "printWidth": 120,
+  "singleQuote": true,
+  "semi": false
+}
