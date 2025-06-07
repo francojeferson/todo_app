@@ -3,7 +3,7 @@ import fs from 'fs' //ES6
 import { v4 as uuid } from 'uuid'
 // const fs = require('fs') //CommonJS
 const DB_FILE_PATH = './core/db'
-console.log('[CRUD]')
+// console.log('[CRUD]')
 
 type UUID = string
 
@@ -15,7 +15,7 @@ interface Todo {
   done: boolean
 }
 
-function create(content: string): Todo {
+export function create(content: string): Todo {
   // create a JS object notation (json.org)
   const todo: Todo = {
     id: uuid(),
@@ -82,16 +82,16 @@ function CLEAR_DB() {
 }
 
 // [SIMULATION]
-CLEAR_DB()
-create('first TODO')
-const secondTodo = create('second TODO')
-deleteById(secondTodo.id)
-const thirdTodo = create('third TODO')
-// update(thirdTodo.id, {
-//   content: 'Updated!',
-//   done: true,
-// })
-updateContentById(thirdTodo.id, 'Updated!')
-const todos = read()
-console.log(todos)
-console.log(todos.length)
+// CLEAR_DB()
+// create('first TODO')
+// const secondTodo = create('second TODO')
+// deleteById(secondTodo.id)
+// const thirdTodo = create('third TODO')
+// // update(thirdTodo.id, {
+// //   content: 'Updated!',
+// //   done: true,
+// // })
+// updateContentById(thirdTodo.id, 'Updated!')
+// const todos = read()
+// console.log(todos)
+// console.log(todos.length)
