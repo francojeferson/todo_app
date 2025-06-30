@@ -1,31 +1,33 @@
 # Active Context: Todo App
 
 ## Current Focus
-1. Removing simulation/test code (HIGHEST PRIORITY)
-   - Remove simulation code at end of crud.ts
-   - Review CLEAR_DB function necessity
-   - Clean up test data generation
 
-2. Web Interface Development
-   - Implement todo list display
-   - Add todo creation form
-   - Create update/delete UI
-   - Style components
-   - Add loading states
+1. **Removing Simulation/Test Code (HIGHEST PRIORITY)**
+   - Remove simulation code at the end of `crud.ts` to clean up production code.
+   - Review necessity of `CLEAR_DB` function and consider moving to test utilities.
+   - Clean up test data generation to ensure it does not interfere with production logic.
 
-3. API Development
-   - Complete RESTful endpoints
-   - Add error handling
-   - Implement validation
-   - Add response types
+2. **Web Interface Development**
+   - Implement todo list display with responsive design.
+   - Add todo creation form with input validation.
+   - Create update/delete UI with confirmation dialogs.
+   - Style components for a consistent and modern look.
+   - Add loading states for better user experience during data operations.
 
-4. Core Improvements
-   - Enhance error handling
-   - Add input validation
-   - Add testing infrastructure
-   - Document API endpoints
+3. **API Development**
+   - Complete RESTful endpoints for all CRUD operations.
+   - Add comprehensive error handling with meaningful messages.
+   - Implement input validation for API requests.
+   - Define response types for better type safety and documentation.
+
+4. **Core Improvements**
+   - Enhance error handling across all operations.
+   - Add robust input validation to prevent data inconsistencies.
+   - Establish testing infrastructure for unit and integration tests.
+   - Document API endpoints for clarity and ease of integration.
 
 ## Recent Changes
+
 1. Next.js Implementation
    - Project converted to Next.js
    - App Router setup
@@ -40,6 +42,7 @@
    - Basic error handling
 
 ## Active Decisions
+
 1. **Storage Format**
    - Using JSON for data persistence
    - File location: `./core/db`
@@ -50,7 +53,7 @@
    - Todo interface with required fields
    - Strict type checking
    - Runtime type safety
-   - Partial<Todo> support for updates
+   - Partial `<Todo>` support for updates
 
 3. **Development Patterns**
    - Next.js App Router architecture
@@ -60,19 +63,24 @@
    - Fail-fast validation
 
 ## Development Utilities
+
 1. **Database Management**
+
    ```typescript
    // Utility function to clear database
    function CLEAR_DB() {
      fs.writeFileSync(DB_FILE_PATH, '')
    }
    ```
+
    - Currently used in simulation code
    - Consider removing or moving to test utilities
    - May need replacement for development purposes
 
 ## Current Patterns
+
 1. **Code Organization**
+
    ```typescript
    interface Todo {
      id: UUID
@@ -115,6 +123,7 @@
    - TypeScript throughout
 
 ## Project Insights
+
 1. **What's Working Well**
    - Next.js integration
    - TypeScript integration
@@ -141,26 +150,25 @@
    - Partial type updates
 
 ## Next Steps
+
 1. **Immediate Tasks**
-   - Remove simulation code from crud.ts
-   - Complete API route implementation
-   - Build todo list UI component
-   - Add todo creation form
-   - Implement update/delete UI
+   - Remove simulation code from `crud.ts` to ensure clean production code.
+   - Review and potentially refactor or remove `CLEAR_DB` function.
+   - Complete API route implementation for all CRUD operations.
+   - Build todo list UI component with responsive design.
+   - Add todo creation form with proper validation.
 
 2. **Short-term Goals**
-   - Remove simulation code and CLEAR_DB function
-   - Complete web interface implementation
-   - Add proper testing
-   - Enhance error messages
-   - Add data validation
-   - Document API methods
+   - Finalize web interface implementation with update/delete functionality.
+   - Implement comprehensive testing infrastructure.
+   - Enhance error messages for better user feedback.
+   - Add robust data validation across all inputs.
+   - Document API methods and endpoints thoroughly.
 
 3. **Technical Debt**
-   - Convert file operations to async
-   - Add comprehensive testing
-   - Improve error handling
-   - Add input validation
-   - Document API methods
-   - Add loading states
-   - Implement proper error boundaries
+   - Convert file operations to asynchronous for better performance.
+   - Add comprehensive unit and integration testing.
+   - Improve error handling with detailed error types.
+   - Implement input validation middleware.
+   - Add loading states and error boundaries in the UI.
+   - Document all critical code paths and decisions.
