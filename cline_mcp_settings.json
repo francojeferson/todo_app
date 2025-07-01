@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "github.com/upstash/context7-mcp": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
