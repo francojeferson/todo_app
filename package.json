@@ -42,10 +42,10 @@
     "prettier": "^2.8.7"
   },
   "dependencies": {
-    "next": "^15.5.10",
+    "next": "^15.5.18",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "typescript": "^5.8.3",
-    "uuid": "^11.1.0"
+    "uuid": "^14.0.0"
   }
 }
