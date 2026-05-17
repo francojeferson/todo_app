@@ -137,4 +137,5 @@ dist
 
 # Rule directories
 .clinerules/
+.memory-bank/
 .kilocode/
