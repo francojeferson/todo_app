@@ -23,7 +23,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  ignorePatterns: ['node_modules/', '_explicacoes/'],
+  ignorePatterns: ['node_modules/', '_explicacoes/', 'next-env.d.ts'],
   rules: {
     'react/no-unknown-property': ['error', { ignore: ['jsx', 'global'] }],
     '@typescript-eslint/no-unused-vars': 'off',
